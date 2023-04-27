@@ -1,0 +1,18 @@
+html.lenis {
+  height: auto;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 0.85em;
+}
+::-webkit-scrollbar-track {
+  background: #444444;
+  border-radius: 100vw;
+  margin-block: 0.025em;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border: 0.25em solid #444444;
+  border-radius: 100vw;
+}
