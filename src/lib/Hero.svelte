@@ -60,33 +60,10 @@
             <h3>Web design</h3>
             <p>Modern design, tailored to your brand</p>
 
-            <span class="icon"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                xml:space="preserve"
-                width="90.266"
-                height="42.828"
-                viewBox="0 0 23.883 11.332"
-                ><g transform="translate(-125.783 -102.213)"
-                  ><path
-                    class="eye_stroke"
-                    d="M126.325 107.851s6.228-4.054 9.811-4.918a6.17 6.17 0 0 1 2.794-.032c3.587.83 9.778 4.95 9.778 4.95s-5.759 4.075-9.146 4.924a8.042 8.042 0 0 1-3.792 0c-3.477-.847-9.445-4.924-9.445-4.924z"
-                  /><ellipse
-                    cx="137.558"
-                    cy="107.786"
-                    rx="4.504"
-                    ry="4.87"
-                    style="fill:none;stroke:#000;stroke-width:1.3979;stroke-dasharray:none"
-                  /><ellipse
-                    class="eye_stroke"
-                    cx="137.558"
-                    cy="107.837"
-                    rx="2.242"
-                    ry="2.337"
-                  /></g
-                ></svg
-              ></span
-            >
+            <span class="icon">
+              <img src="images/eye_yellow.svg" alt="eye" />
+              <img src="images/eye_black.svg" alt="eye" />
+            </span>
           </HeroCard>
         </div>
 
@@ -99,46 +76,18 @@
             <h3>Web development</h3>
             <p>New tech for maximal performence</p>
 
-            <span class="icon"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                xml:space="preserve"
-                width="48.985"
-                height="48.965"
-                viewBox="0 0 12.961 12.955"
-                ><path
-                  class="one"
-                  d="M123.975 101.421h.289v1.325h-.289z"
-                  style="fill:#000;stroke:#000;stroke-width:.749658"
-                  transform="translate(-122.778 -90.288)"
-                /><path
-                  class="two"
-                  d="M126.744 100.482h.229v2.208h-.229z"
-                  style="fill:#000;stroke:#000;stroke-width:.861432"
-                  transform="translate(-122.778 -90.288)"
-                /><path
-                  class="three"
-                  d="M129.519 98.477h.144v4.239h-.144z"
-                  style="fill:#000;stroke:#000;stroke-width:.946492"
-                  transform="translate(-122.778 -90.288)"
-                /><path
-                  class="four"
-                  d="M132.311 97.36h.127v5.383h-.127z"
-                  style="fill:#000;stroke:#000;stroke-width:1.00012"
-                  transform="translate(-122.778 -90.288)"
-                /><path
-                  class="five"
-                  d="M135.127 95.204h.096v7.524h-.096z"
-                  style="fill:#000;stroke:#000;stroke-width:1.03056"
-                  transform="translate(-122.778 -90.288)"
-                /><path
-                  class="six"
-                  d="m122.778 98.812 3.296-4.002 1.148 1.005 2.835-3.104 1.174 1.61 2.22-2.727-.903-1.043 2.766-.263-.561 2.795-.748-.815-2.8 3.256-1.148-1.51-2.91 3.135-.883-.846-2.74 3.143z"
-                  style="fill:#000;stroke:none;stroke-width:.925658"
-                  transform="translate(-122.778 -90.288)"
-                /></svg
-              ></span
-            >
+            <span class="icon">
+              <img
+                class="sm"
+                src="images/performence_yellow.svg"
+                alt="performence"
+              />
+              <img
+                class="sm"
+                src="images/performence_black.svg"
+                alt="performence"
+              />
+            </span>
           </HeroCard>
         </div>
 
@@ -151,7 +100,10 @@
             <h3>All in one</h3>
             <p>Let's bring it together</p>
 
-            <span class="icon"><img src="images/amor.svg" alt="" /></span>
+            <span class="icon">
+              <img src="images/amor_yellow.svg" alt="amor" />
+              <img src="images/amor_black.svg" alt="amor" /></span
+            >
           </HeroCard>
         </div>
 
@@ -266,39 +218,32 @@
 
   .card .icon {
     position: absolute;
+    display: flex;
+    align-items: flex-end;
     bottom: 2rem;
+    width: 4rem;
+    height: 4rem;
   }
 
-  .card .icon svg {
-    width: 50%;
-    height: 50%;
+  .card .icon img {
+    position: absolute;
+    width: 100%;
+  }
+  .card .icon .sm {
+    width: 70%;
   }
 
   .card.bg {
     background-color: var(--primary);
   }
+
+  /* hover effext */
   .card.bg:hover {
     color: var(--primary);
     background-color: var(--black);
   }
-
-  /* hover effext */
-
-  .card.bg:hover svg path {
-    fill: var(--black);
-    stroke: var(--black);
-  }
-
-  .card.bg .eye_stroke {
-    fill: none;
-    stroke: var(--black);
-    stroke-width: 1.0843;
-    stroke-dasharray: none;
-  }
-
-  .card.bg:hover .eye_stroke {
-    fill: var(--primary);
-    stroke: var(--primary);
+  .card.bg:hover .icon img:last-child {
+    opacity: 0;
   }
 
   .card h3 {
